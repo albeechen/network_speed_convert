@@ -1,0 +1,30 @@
+.convert_container{
+  flex: 1;
+  padding: 30px;
+}
+
+.layout_control{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+
+.title{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 35px;
+}
+
+.unit{
+background-color: #2d7bee;
+border-radius: 3px;
+color: white;
+}
+
+.name{
+color: #a8aeba;
+font-weight: bold;
+}
