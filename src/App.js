@@ -1,11 +1,12 @@
 import './App.css';
 
-import Converter from './component/converter/converter';
+import SpeedConvert from './component/speedconverter/speedconverter';
+
 
 function App() {
   return (
     <div className="App">
-      <Converter />
+      <SpeedConvert />
     </div>
   );
 }
