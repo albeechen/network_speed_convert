@@ -1,18 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SwapHorizIcon from '@material-ui/icons/SwapHoriz';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import TextField from '@material-ui/core/TextField';
 import './converter.scss';
 
 
-const Convert = () => {
-    const [imputValue, setInputValue] = useState(1000); 
-
-    const handleInputChange = (e) => {
-        const { value } = e.target;
-        setInputValue(value);
-    };
-
+const Convert = ({onChange, value}) => {
+    
     return (
         <div className='card-converter'>
             <div className='layout_control'>
@@ -27,11 +21,11 @@ const Convert = () => {
             <div className='layout_control'>
                 <TextField 
                     type="numbers" 
-                    onChange={handleInputChange}
-                    value={imputValue} 
+                    onChange={onChange}
+                    value={value} 
                     />
                 <div><ArrowForwardIosIcon/></div>
-                <div className='title result'>{imputValue/8}</div>
+                <div className='title result'>{value/8}</div>
             </div>
         </div>
     );

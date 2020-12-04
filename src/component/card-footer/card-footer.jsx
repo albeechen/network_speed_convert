@@ -2,27 +2,25 @@ import React from 'react';
 
 import './card-footer.scss';
 
-const CardFooter = () => {
-
-    let inputValue = 30;
+const CardFooter = ({value}) => {
     let criteria;
 
-    if (!inputValue) {
+    if (!value) {
         criteria = {
             title: '---',
             backgroundColor: '#d3d8e2',
         };
-    }else if (inputValue < 15) {
+    }else if (value < 15) {
         criteria = {
             title: 'SLOW',
             backgroundColor: '#ee362d',
         };
-    } else if (inputValue < 40) {
+    } else if (value < 40) {
         criteria = {
             title: 'GOOD',
             backgroundColor: '#1b82f1',
         };
-    } else if (inputValue >= 40) {
+    } else if (value >= 40) {
         criteria = {
             title: 'FAST',
             backgroundColor: '#13d569',
